@@ -110,6 +110,11 @@ ENV/
 env.bak/
 venv.bak/
 
+# Project specific
+paytrack-api/.env
+paytrack-api/venv/
+paytrack-api/__pycache__/
+
 # Spyder project settings
 .spyderproject
 .spyproject
