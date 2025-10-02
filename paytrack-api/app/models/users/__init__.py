@@ -1,0 +1,9 @@
+from .user_model import UserModel
+from .user_qr_code_model import UserQRCodeModel
+from .verification_code_model import VerificationCodeModel
+from .verification_code_password_reset_model import VerificationCodePasswordResetModel
+
+UserModel.model_rebuild()
+UserQRCodeModel.model_rebuild()
+VerificationCodeModel.model_rebuild()
+VerificationCodePasswordResetModel.model_rebuild()
