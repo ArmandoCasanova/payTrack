@@ -1,4 +1,3 @@
-
 from logging.config import fileConfig
 import os
 from pathlib import Path
@@ -12,9 +11,18 @@ from app.core.settings import settings
 
 # Importa los modelos para que entren al metadata
 from app.models.users.user_model import UserModel
-from app.models.users.user_qr_code_model import UserQRCodeModel
 from app.models.users.verification_code_model import VerificationCodeModel
 from app.models.users.verification_code_password_reset_model import VerificationCodePasswordResetModel
+from app.models.clients.client_model import ClientModel
+from app.models.clients.client_financial_history_model import ClientFinancialHistoryModel
+from app.models.loans.loan_model import LoanModel
+from app.models.payments.payment_model import PaymentModel
+from app.models.expenses.expense_model import ExpenseModel
+from app.models.suppliers.supplier_model import SupplierModel
+from app.models.files.file_model import FileModel
+from app.models.collection_routes.collection_route_model import CollectionRouteModel
+from app.models.reports.report_model import ReportModel
+from app.models.daily_cutoff.daily_cutoff_model import DailyCutoffModel
 
 # Carga el .env desde el root del proyecto
 ROOT_DIR = Path(__file__).resolve().parents[1]
