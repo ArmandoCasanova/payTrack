@@ -15,26 +15,6 @@ from app.models.users.user_model import UserModel
 from app.models.users.user_qr_code_model import UserQRCodeModel
 from app.models.users.verification_code_model import VerificationCodeModel
 from app.models.users.verification_code_password_reset_model import VerificationCodePasswordResetModel
-# Importa los modelos de catálogo
-from app.models.catalog.product_model import ProductModel
-from app.models.catalog.product_category_model import ProductCategoryModel
-from app.models.catalog.product_category_link_model import ProductCategoryLinkModel
-# Inventario
-from app.models.inventory.ingredient_model import IngredientModel
-from app.models.inventory.product_ingredient_model import ProductIngredientModel
-# Personalización
-from app.models.customization.customization_group_model import CustomizationGroupModel
-from app.models.customization.customization_option_model import CustomizationOptionModel
-from app.models.customization.product_customization_group_model import ProductCustomizationGroupModel
-# Pedidos
-from app.models.orders.order_model import OrderModel
-from app.models.orders.order_item_model import OrderItemModel
-from app.models.orders.order_item_customization_model import OrderItemCustomizationModel
-from app.models.orders.transaction_model import TransactionModel
-from app.models.orders.points_used_model import PointsUsedModel
-# Promociones
-from app.models.promotions.promotion_model import PromotionModel
-from app.models.promotions.product_promotion_model import ProductPromotionModel
 
 # Carga el .env desde el root del proyecto
 ROOT_DIR = Path(__file__).resolve().parents[1]
