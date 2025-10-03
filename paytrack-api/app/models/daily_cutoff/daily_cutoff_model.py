@@ -56,7 +56,7 @@ class DailyCutoffModel(BasePayTrackModel, table=True):
     bank_balance: Optional[Decimal] = Field(default=None, description="Saldo bancario al cierre")
 
     # Relaciones
-    responsible: "UserModel" = Relationship(back_populates="daily_cutoffs")
+    # responsible: "UserModel" = Relationship(back_populates="daily_cutoffs")
     
     @property
     def net_cash_flow(self) -> Decimal:

@@ -56,8 +56,8 @@ class CollectionRouteModel(BasePayTrackModel, table=True):
     # Soft delete
 
     # Relaciones
-    employee: "UserModel" = Relationship(back_populates="collection_routes")
-    loan: "LoanModel" = Relationship(back_populates="collection_routes")
+    # employee: "UserModel" = Relationship(back_populates="collection_routes")
+    # loan: "LoanModel" = Relationship(back_populates="collection_routes")
     
     @property
     def is_completed(self) -> bool:

@@ -48,9 +48,9 @@ class PaymentModel(BasePayTrackModel, table=True):
     
     # Soft delete
 
-    # Relaciones
-    client: "ClientModel" = Relationship(back_populates="payments")
-    responsible: "UserModel" = Relationship(back_populates="payments_responsible")
+    # Relaciones - Comentadas temporalmente para evitar errores de importación circular
+    # client: "ClientModel" = Relationship(back_populates="payments")
+    # responsible: "UserModel" = Relationship(back_populates="payments_responsible")
     
     @property
     def total_amount(self) -> Decimal:

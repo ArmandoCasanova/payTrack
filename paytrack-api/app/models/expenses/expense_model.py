@@ -54,8 +54,8 @@ class ExpenseModel(BasePayTrackModel, table=True):
     # Soft delete
 
     # Relaciones
-    responsible: "UserModel" = Relationship(back_populates="expenses")
-    supplier: Optional["SupplierModel"] = Relationship(back_populates="expenses")
+    # responsible: "UserModel" = Relationship(back_populates="expenses")
+    # supplier: Optional["SupplierModel"] = Relationship(back_populates="expenses")
     
     @property
     def is_paid(self) -> bool:

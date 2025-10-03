@@ -9,8 +9,7 @@ from passlib.context import CryptContext
 
 from app.core.settings import settings
 
-from app.models.users.user_model import UserModel
-from app.constants.user_constants import UserRoles
+from app.models.users.user_model import UserModel, UserRole
 
 ACCESS_TOKEN_EXPIRY = 3600
 
@@ -64,14 +63,14 @@ def get_user_token(
     user: UserModel,
     is_refresh: bool = False,
 ) -> str:
-    # Validar que el rol del usuario esté en UserRoles
-    if user.role not in [role.value for role in UserRoles]:
+    # Validar que el rol del usuario esté en UserRole
+    if user.role not in [role.value for role in UserRole]:
         raise ValueError(f"Invalid user role: {user.role}")
     user_data = {
         "id": str(user.user_id),
         "email": user.email,
-        "name": user.name,
-        "role": user.role,
+        "name": user.full_name,  # Usar la propiedad full_name del modelo
+        "role": user.role.value,  # Convertir enum a string
     }
     return create_access_token(
         user_data=user_data,

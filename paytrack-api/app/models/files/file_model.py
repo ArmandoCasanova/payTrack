@@ -40,7 +40,7 @@ class FileModel(BasePayTrackModel, table=True):
 
     # Relaciones
     client: "ClientModel" = Relationship(back_populates="files")
-    uploader: Optional["UserModel"] = Relationship(back_populates="uploaded_files")
+    # uploader: Optional["UserModel"] = Relationship(back_populates="uploaded_files")
     
     @property
     def is_image(self) -> bool:

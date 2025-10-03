@@ -43,10 +43,10 @@ class LoanModel(BasePayTrackModel, table=True):
     
     # Soft delete
 
-    # Relaciones
-    client: "ClientModel" = Relationship(back_populates="loans")
-    authorizer: "UserModel" = Relationship(back_populates="authorized_loans")
-    collection_routes: List["CollectionRouteModel"] = Relationship(back_populates="loan")
+    # Relaciones - Comentadas temporalmente para evitar errores de importación circular
+    # client: "ClientModel" = Relationship(back_populates="loans")
+    # authorizer: "UserModel" = Relationship(back_populates="authorized_loans")
+    # collection_routes: List["CollectionRouteModel"] = Relationship(back_populates="loan")
     
     @property
     def is_active(self) -> bool:

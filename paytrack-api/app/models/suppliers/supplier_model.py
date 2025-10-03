@@ -44,7 +44,7 @@ class SupplierModel(BasePayTrackModel, table=True):
     # Soft delete
 
     # Relaciones
-    expenses: List["ExpenseModel"] = Relationship(back_populates="supplier")
+    # expenses: List["ExpenseModel"] = Relationship(back_populates="supplier")
     
     @property
     def is_active(self) -> bool:

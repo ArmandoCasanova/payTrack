@@ -38,11 +38,11 @@ class ClientModel(BasePayTrackModel, table=True):
     
     # Soft delete
 
-    # Relaciones
-    loans: List["LoanModel"] = Relationship(back_populates="client")
-    payments: List["PaymentModel"] = Relationship(back_populates="client")
-    files: List["FileModel"] = Relationship(back_populates="client")
-    financial_history: List["ClientFinancialHistoryModel"] = Relationship(back_populates="client")
+    # Relaciones - Comentadas temporalmente para evitar errores de importación circular
+    # loans: List["LoanModel"] = Relationship(back_populates="client")
+    # payments: List["PaymentModel"] = Relationship(back_populates="client")
+    # files: List["FileModel"] = Relationship(back_populates="client")
+    # financial_history: List["ClientFinancialHistoryModel"] = Relationship(back_populates="client")
     
     @property
     def full_name(self) -> str:

@@ -44,8 +44,8 @@ class ClientFinancialHistoryModel(BasePayTrackModel, table=True):
     
     # Soft delete
 
-    # Relaciones
-    client: "ClientModel" = Relationship(back_populates="financial_history")
+    # Relaciones - Comentada temporalmente para evitar errores de importación circular
+    # client: "ClientModel" = Relationship(back_populates="financial_history")
     
     @property
     def debt_to_income_ratio(self) -> Optional[float]:

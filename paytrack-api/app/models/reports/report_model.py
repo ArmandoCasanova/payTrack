@@ -72,7 +72,7 @@ class ReportModel(BasePayTrackModel, table=True):
     notes: Optional[str] = Field(default=None, description="Notas adicionales")
 
     # Relaciones
-    generator: "UserModel" = Relationship(back_populates="generated_reports")
+    # generator: "UserModel" = Relationship(back_populates="generated_reports")
     
     @property
     def is_completed(self) -> bool:

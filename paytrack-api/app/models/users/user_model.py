@@ -57,14 +57,14 @@ class UserModel(BasePayTrackModel, table=True):
     verification_codes: List["VerificationCodeModel"] = Relationship(back_populates="user")
     verification_codes_password_reset: List["VerificationCodePasswordResetModel"] = Relationship(back_populates="user")
     
-    # Relaciones del sistema de préstamos
-    authorized_loans: List["LoanModel"] = Relationship(back_populates="authorizer")
-    payments_responsible: List["PaymentModel"] = Relationship(back_populates="responsible")
-    expenses: List["ExpenseModel"] = Relationship(back_populates="responsible")
-    collection_routes: List["CollectionRouteModel"] = Relationship(back_populates="employee")
-    generated_reports: List["ReportModel"] = Relationship(back_populates="generator")
-    daily_cutoffs: List["DailyCutoffModel"] = Relationship(back_populates="responsible")
-    uploaded_files: List["FileModel"] = Relationship(back_populates="uploader")
+    # Relaciones del sistema de préstamos - Comentadas temporalmente para evitar errores de importación circular
+    # authorized_loans: List["LoanModel"] = Relationship(back_populates="authorizer")
+    # payments_responsible: List["PaymentModel"] = Relationship(back_populates="responsible")
+    # expenses: List["ExpenseModel"] = Relationship(back_populates="responsible")
+    # collection_routes: List["CollectionRouteModel"] = Relationship(back_populates="employee")
+    # generated_reports: List["ReportModel"] = Relationship(back_populates="generator")
+    # daily_cutoffs: List["DailyCutoffModel"] = Relationship(back_populates="responsible")
+    # uploaded_files: List["FileModel"] = Relationship(back_populates="uploader")
     
     @property
     def full_name(self) -> str:
